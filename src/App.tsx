@@ -1,13 +1,17 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import React from "react";
+import { Route, Switch, Redirect } from "react-router";
+import { HashRouter as Router } from "react-router-dom";
 import CompanyList from "./views/company/List";
 import NewCompany from "./views/company/New";
 
 export default function() {
   return (
     <Router>
-      <Route path="/company/list" component={CompanyList} />
-      <Route path="/company/new" component={NewCompany} />
+      <Switch>
+        <Redirect path="/" exact to={{ pathname: "/company/list" }} />
+        <Route path="/company/list" component={CompanyList} />
+        <Route path="/company/new" component={NewCompany} />
+      </Switch>
     </Router>
   );
 }

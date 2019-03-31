@@ -1,15 +1,10 @@
 import React from "react";
-import PageLayout from "../../components/PageLayout";
-import { Button, Input, Row, Col, Form, Table, Divider } from "antd";
+import { Form, Table, Divider } from "antd";
 import Search from "antd/lib/input/Search";
-import HeaderForm from "../../components/HeaderForm";
 import { ColumnProps } from "antd/lib/table";
+import { PageLayout, HeaderForm, Button } from "../../components";
 
 export default function(props: any) {
-  const fix: any = {
-    type: "primary"
-  };
-
   const columns: ColumnProps<any>[] = [
     { title: "名称", key: 1 },
     { title: "所在地址", key: 2 },
@@ -38,7 +33,7 @@ export default function(props: any) {
           </Form.Item>
           <Form.Item>
             <Button
-              {...fix}
+              buttontype="primary"
               icon="plus"
               onClick={() => {
                 props.history.push("/company/new");
@@ -50,7 +45,7 @@ export default function(props: any) {
         </HeaderForm>
       }
     >
-      <Table columns={columns} />
+      <Table columns={columns} bordered={true} />
     </PageLayout>
   );
 }
