@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "antd/dist/antd.css";
-import "./navi";
+import "@fyl080801/navijs";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
