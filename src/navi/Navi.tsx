@@ -4,7 +4,7 @@ import SubMenu from "antd/lib/menu/SubMenu";
 
 const { Header, Sider, Content } = Layout;
 
-export default class Navi extends Component<any> {
+export default class Navi extends Component<{ body: Node[] }> {
   state = {
     collapsed: false
   };
@@ -16,7 +16,9 @@ export default class Navi extends Component<any> {
   };
 
   componentDidMount() {
-    HTMLDocument.prototype.appendChild.call(this.refs.main, this.props.body);
+    this.props.body.forEach(node => {
+      HTMLDocument.prototype.appendChild.call(this.refs.main, node);
+    });
   }
 
   render() {
