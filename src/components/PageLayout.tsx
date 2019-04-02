@@ -11,6 +11,7 @@ export default function(props: any) {
         title={props.title}
         subTitle={props.subTitle || <span>&nbsp;</span>}
         extra={props.header}
+        footer={props.headerFooter}
       />
       <Content style={{ padding: 16 }}>{props.children}</Content>
     </Layout>
