@@ -1,23 +1,25 @@
-import React, { useState } from "react";
-import { PageLayout, HeaderForm, Button } from "../../components";
-import Form from "antd/lib/form";
-import Search from "antd/lib/input/Search";
-import { Table, Divider, Icon, Popconfirm, Drawer, Input, Row, Col } from "antd";
-import { ColumnProps } from "antd/lib/table";
-import StrategyForm from "./StrategyForm";
+import React, { useState } from 'react';
+import Form from 'antd/lib/form';
+import Search from 'antd/lib/input/Search';
+import { Table, Divider, Icon, Popconfirm, Drawer, Input, Row, Col } from 'antd';
+import { ColumnProps } from 'antd/lib/table';
+import StrategyForm from './StrategyForm';
+import { layout } from '@fyl080801/navijs';
+
+const { Button, HeaderForm, PageLayout } = layout;
 
 export default function() {
   const [formVisible, setFormVisible] = useState(false);
   const [visible, setVisible] = useState(false);
 
   const columns: ColumnProps<any>[] = [
-    { title: "设备分类", key: 1 },
-    { title: "巡检内容", key: 2 },
-    { title: "巡检要求", key: 3 },
-    { title: "巡检方法", key: 4 },
-    { title: "巡检周期", key: 5 },
+    { title: '设备分类', key: 1 },
+    { title: '巡检内容', key: 2 },
+    { title: '巡检要求', key: 3 },
+    { title: '巡检方法', key: 4 },
+    { title: '巡检周期', key: 5 },
     {
-      title: "操作",
+      title: '操作',
       width: 150,
       key: 6,
       render: (text, record) => (

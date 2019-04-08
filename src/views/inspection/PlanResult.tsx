@@ -1,19 +1,21 @@
-import React, { useState } from "react";
-import { PageLayout, HeaderForm, Button } from "../../components";
-import Form from "antd/lib/form";
-import Search from "antd/lib/input/Search";
-import { Table, Divider, Icon, Tabs, Drawer, Input, DatePicker, Row, Col } from "antd";
-import { ColumnProps } from "antd/lib/table";
+import React, { useState } from 'react';
+import Form from 'antd/lib/form';
+import Search from 'antd/lib/input/Search';
+import { Table, Divider, Icon, Tabs, Drawer, Input, DatePicker, Row, Col } from 'antd';
+import { ColumnProps } from 'antd/lib/table';
+import { layout } from '@fyl080801/navijs';
+
+const { Button, HeaderForm, PageLayout } = layout;
 
 export default function() {
   const [visible, setVisible] = useState(false);
 
   const columns: ColumnProps<any>[] = [
-    { title: "计划", key: 1 },
-    { title: "巡检类型", key: 2 },
-    { title: "时间段", key: 3 },
-    { title: "执行状态", key: 4 },
-    { title: "执行进度", key: 5 }
+    { title: '计划', key: 1 },
+    { title: '巡检类型', key: 2 },
+    { title: '时间段', key: 3 },
+    { title: '执行状态', key: 4 },
+    { title: '执行进度', key: 5 }
   ];
 
   const search = () => {};

@@ -1,16 +1,18 @@
-import React from "react";
-import { Form, Table, Divider } from "antd";
-import Search from "antd/lib/input/Search";
-import { ColumnProps } from "antd/lib/table";
-import { PageLayout, HeaderForm, Button } from "../../components";
+import React from 'react';
+import { Form, Table, Divider } from 'antd';
+import Search from 'antd/lib/input/Search';
+import { ColumnProps } from 'antd/lib/table';
+import { layout } from '@fyl080801/navijs';
+
+const { Button, HeaderForm, PageLayout } = layout;
 
 export default function(props: any) {
   const columns: ColumnProps<any>[] = [
-    { title: "名称", key: 1 },
-    { title: "所在地址", key: 2 },
-    { title: "公司性质", key: 3 },
+    { title: '名称', key: 1 },
+    { title: '所在地址', key: 2 },
+    { title: '公司性质', key: 3 },
     {
-      title: "操作",
+      title: '操作',
       width: 150,
       key: 4,
       render: (text, record) => (
@@ -36,7 +38,7 @@ export default function(props: any) {
               buttontype="primary"
               icon="plus"
               onClick={() => {
-                props.history.push("/company/new");
+                props.history.push('/company/new');
               }}
             >
               新建

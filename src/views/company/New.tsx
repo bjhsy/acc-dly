@@ -1,8 +1,10 @@
-import React from "react";
-import SchemaForm from "react-jsonschema-form";
-import { Form, Input, Layout, Radio, Row, Col } from "antd";
-import RadioGroup from "antd/lib/radio/group";
-import { HeaderForm, PageLayout, Button } from "../../components";
+import React from 'react';
+import SchemaForm from 'react-jsonschema-form';
+import { Form, Input, Layout, Radio, Row, Col } from 'antd';
+import RadioGroup from 'antd/lib/radio/group';
+import { layout } from '@fyl080801/navijs';
+
+const { Button, HeaderForm, PageLayout } = layout;
 
 export default function(props: any) {
   // const schema: any = {
@@ -21,7 +23,7 @@ export default function(props: any) {
   // };
 
   const fix: any = {
-    type: "primary"
+    type: 'primary'
   };
 
   const formItemLayout = {
@@ -39,7 +41,7 @@ export default function(props: any) {
     <PageLayout
       title="新建外部单位"
       onBack={() => {
-        props.history.push("/company/list");
+        props.history.push('/company/list');
       }}
       header={
         <HeaderForm>
@@ -51,7 +53,7 @@ export default function(props: any) {
         </HeaderForm>
       }
     >
-      <Layout.Content style={{ background: "#fff", padding: 16 }}>
+      <Layout.Content style={{ background: '#fff', padding: 16 }}>
         <Form {...formItemLayout}>
           <Row gutter={16}>
             <Col span={10}>
