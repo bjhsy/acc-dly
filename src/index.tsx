@@ -8,14 +8,14 @@ import { LocaleProvider } from 'antd';
 import 'antd/dist/antd.css';
 import '@fyl080801/navijs/lib/index.css';
 
-bootstrap();
-
 ReactDOM.render(
   <LocaleProvider locale={zhCN}>
     <App />
   </LocaleProvider>,
   document.getElementById('root')
 );
+
+bootstrap();
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
