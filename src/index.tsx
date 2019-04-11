@@ -1,18 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-import zhCN from 'antd/lib/locale-provider/zh_CN';
-import { bootstrap } from '@fyl080801/navijs';
-import { LocaleProvider } from 'antd';
-import 'antd/dist/antd.css';
-import '@fyl080801/navijs/lib/index.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import zhCN from "antd/lib/locale-provider/zh_CN";
+import { bootstrap } from "@fyl080801/navijs";
+import { LocaleProvider } from "antd";
+import "antd/dist/antd.css";
+import "@fyl080801/navijs/lib/index.css";
 
 ReactDOM.render(
   <LocaleProvider locale={zhCN}>
     <App />
   </LocaleProvider>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 bootstrap();
