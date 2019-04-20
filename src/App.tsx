@@ -7,6 +7,8 @@ import InspectionStrategy from "./views/inspection/Strategy";
 import InspectionPlan from "./views/inspection/Plan";
 import InspectionPlanResult from "./views/inspection/PlanResult";
 
+import TestForm from "./views/company/Form";
+
 export default function() {
   return (
     <Router>
@@ -14,6 +16,7 @@ export default function() {
         <Redirect path="/" exact to={{ pathname: "/company/list" }} />
         <Route path="/company/list" component={CompanyList} />
         <Route path="/company/new" component={NewCompany} />
+        <Route path="/company/form" component={TestForm} />
         <Route path="/inspection/strategy" component={InspectionStrategy} />
         <Route path="/inspection/plan" component={InspectionPlan} />
         <Route path="/inspection/planresult" component={InspectionPlanResult} />
